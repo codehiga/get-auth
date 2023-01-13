@@ -1,5 +1,5 @@
 # Projeto de Autenticação de Usuário
-Aplicação para autenticação de usuário baseada na arquitetura limpa e no desenvolvimento guiado por testes (TDD).
+Este projeto fornece uma solução de autenticação de usuário baseada na arquitetura limpa e no desenvolvimento guiado por testes (TDD). Ele oferece funcionalidades para criação de usuário, autenticação e recuperação de senha, validações e garante a segurança dos dados. Tecnologias utilizadas são Java, Maven e JUnit.
 
 ## Tecnologias Utilizadas
 - Java 11
