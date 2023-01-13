@@ -9,7 +9,7 @@ import com.auth.domain.entities.User;
 public class UserTest {
   @Test
   public void shouldCreateUser() {
-    String inputValidUsername = "valid_username";
+    String inputValidUsername = "validusername";
     String inputValidPassword = "12345678";
     User createdUser = User.create(inputValidUsername, inputValidPassword);
     assertEquals(createdUser.username.value, inputValidUsername);
@@ -28,7 +28,7 @@ public class UserTest {
 
   @Test
   public void shouldThrowErrorIfPasswordIsInvalid() {
-    String inputValidUsername = "valid_username";
+    String inputValidUsername = "validusername";
     String inputInvalidPassword = "1234567";
     try {
       User.create(inputValidUsername, inputInvalidPassword);

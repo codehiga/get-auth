@@ -11,7 +11,7 @@ import com.auth.domain.entities.errors.InvalidUsernameException;
 public class UsernameTest {
   @Test
   public void shouldCreateValidUsername() {
-    String usernameInput = "valid_username";
+    String usernameInput = "validusername";
     Username createdUsername = Username.create(usernameInput);
     assertEquals(usernameInput, createdUsername.value);
   }
