@@ -3,10 +3,10 @@ package com.auth.domain.entities;
 import com.auth.domain.entities.errors.InvalidUsernameException;
 
 public class Username {
-  public String username;
+  public String value;
 
   private Username(String username) {
-    this.username = username;
+    this.value = username;
   }
 
   public static Username create(String username) {

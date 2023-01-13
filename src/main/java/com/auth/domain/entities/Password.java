@@ -3,10 +3,10 @@ package com.auth.domain.entities;
 import com.auth.domain.entities.errors.InvalidPasswordException;
 
 public class Password {
-  public String password;
+  public String value;
 
   private Password(String password) {
-    this.password = password;
+    this.value = password;
   }
 
   public static Password create(String password) {
