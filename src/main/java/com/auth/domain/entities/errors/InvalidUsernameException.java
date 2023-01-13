@@ -4,6 +4,6 @@ public class InvalidUsernameException extends Error {
   public String name = "InvalidUsernameException";
 
   public InvalidUsernameException() {
-    super("Nome de úsuario não cumpre os requisitos mínimos!");
+    super("O nome de úsuario não cumpre os requisitos mínimos!");
   }
 }
