@@ -3,7 +3,6 @@ package com.auth.domain.entities;
 import com.auth.domain.entities.errors.InvalidUsernameException;
 
 public class Username {
-
   public String username;
 
   private Username(String username) {
