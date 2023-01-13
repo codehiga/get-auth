@@ -1,13 +1,15 @@
 package com.auth.libs;
 
-import org.mindrot.jbcrypt.BCrypt;
+import at.favre.lib.crypto.bcrypt.BCrypt;
 
 public class PassHash {
   public static String hash(String password, String salt) {
-    return BCrypt.hashpw(password, salt);
+    String hash = BCrypt.withDefaults().hashToString(12, password.toCharArray());
+    return hash;
   }
 
   public static boolean isEqual(String hash, String password) {
-    return BCrypt.checkpw(hash, password);
+    BCrypt.Result isEqual = BCrypt.verifyer().verify(password.toCharArray(), hash);
+    return isEqual.verified;
   }
 }
