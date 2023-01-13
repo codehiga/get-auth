@@ -14,7 +14,8 @@ public class PasswordTest {
   public void shouldCreatePassword() {
     String inputPassword = "12345678";
     Either<InvalidPasswordException, Password> createdPassword = Password.create(inputPassword);
-    assertEquals(createdPassword.getRight().value, inputPassword);
+    String passHash = createdPassword.getRight().value;
+    assertTrue(Password.verifyPassword(inputPassword, passHash));
   }
 
   @Test
