@@ -17,4 +17,3 @@ O projeto segue a arquitetura limpa, com as seguintes camadas:
 ## Funcionalidades
 - Criação de usuário: O usuário pode se registrar fornecendo seu nome de usuário, email e senha. As informações são validadas antes de serem armazenadas no banco de dados.
 - Autenticação de usuário: O usuário pode se autenticar fornecendo seu nome de usuário e senha. A autenticação é realizada comparando as informações fornecidas com as informações armazenadas no banco de dados.
-- Recuperação de senha: O usuário pode solicitar uma redefinição de senha fornecendo seu endereço de e-mail. Um link de redefinição de senha é enviado para o e-mail do usuário.
