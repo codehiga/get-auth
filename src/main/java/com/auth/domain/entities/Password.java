@@ -1,6 +1,7 @@
 package com.auth.domain.entities;
 
 import com.auth.domain.entities.errors.InvalidPasswordException;
+import com.auth.shared.Either;
 
 public class Password {
   public String value;
@@ -9,12 +10,12 @@ public class Password {
     this.value = password;
   }
 
-  public static Password create(String password) {
+  public static Either<InvalidPasswordException, Password> create(String password) {
     boolean isValidPassword = isValidPassword(password);
     if(!isValidPassword) {
-      throw new InvalidPasswordException();
+      return Either.left(new InvalidPasswordException());
     }
-    return new Password(password);
+    return Either.right(new Password(password));
   }
 
   public static boolean isValidPassword(String password) {

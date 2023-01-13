@@ -1,6 +1,7 @@
 package com.auth.domain.entities;
 
 import com.auth.domain.entities.errors.InvalidUsernameException;
+import com.auth.shared.Either;
 
 public class Username {
   public String value;
@@ -9,12 +10,12 @@ public class Username {
     this.value = username;
   }
 
-  public static Username create(String username) {
+  public static Either<InvalidUsernameException, Username> create(String username) {
     boolean isValidUsername = isValid(username);
     if(!isValidUsername) {
-      throw new InvalidUsernameException();
+      return Either.left(new InvalidUsernameException());
     }
-    return new Username(username);
+    return Either.right(new Username(username));
   }
 
   private static boolean isValid(String username) {
