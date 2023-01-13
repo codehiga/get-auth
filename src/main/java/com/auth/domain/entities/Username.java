@@ -27,6 +27,9 @@ public class Username {
     if(username.length() > 64 | username.length() < 3) {
       return false;
     }
+    if(username.matches(".*[^a-zA-Z0-9].*")){
+      return false;
+    }
     return true;
   }
 
