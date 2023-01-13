@@ -3,7 +3,7 @@ package com.auth.application.usecases;
 import com.auth.application.dto.CreateNewUserDTO;
 import com.auth.domain.entities.User;
 import com.auth.domain.errors.ValidationError;
-import com.auth.domain.ports.UserRepository;
+import com.auth.infra.ports.UserRepository;
 import com.auth.shared.Either;
 
 public class RegisterUser {
