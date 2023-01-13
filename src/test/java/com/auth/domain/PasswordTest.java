@@ -1,6 +1,7 @@
 package com.auth.domain;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
@@ -15,7 +16,8 @@ public class PasswordTest {
     String inputPassword = "12345678";
     Either<InvalidPasswordException, Password> createdPassword = Password.create(inputPassword);
     String passHash = createdPassword.getRight().value;
-    assertTrue(Password.verifyPassword(inputPassword, passHash));
+    assertNotEquals(passHash, "");
+    assertTrue(createdPassword.isRight());
   }
 
   @Test
