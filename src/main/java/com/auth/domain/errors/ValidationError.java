@@ -20,6 +20,7 @@ public class ValidationError {
   public enum ErrorType {
     INVALID_USERNAME,
     INVALID_PASSWORD,
-    USER_ALREADY_EXIST
+    USER_ALREADY_EXIST,
+    USER_NOT_FOUND
   }
 }
