@@ -1,7 +1,5 @@
 package com.auth.domain.entities;
 
-import org.mindrot.jbcrypt.BCrypt;
-
 import com.auth.domain.entities.errors.InvalidPasswordException;
 import com.auth.libs.PassHash;
 import com.auth.shared.Either;
@@ -23,7 +21,7 @@ public class Password {
   }
 
   public static String hashPassword(String password) {
-    return PassHash.hash(password, BCrypt.gensalt());
+    return PassHash.hash(password);
 }
 
   public static boolean verifyPassword(String password, String hashedPassword) {

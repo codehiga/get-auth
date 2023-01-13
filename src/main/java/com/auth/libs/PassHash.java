@@ -3,7 +3,7 @@ package com.auth.libs;
 import at.favre.lib.crypto.bcrypt.BCrypt;
 
 public class PassHash {
-  public static String hash(String password, String salt) {
+  public static String hash(String password) {
     String hash = BCrypt.withDefaults().hashToString(12, password.toCharArray());
     return hash;
   }
