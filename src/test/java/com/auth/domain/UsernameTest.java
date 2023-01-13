@@ -1,40 +1,37 @@
 package com.auth.domain;
 
-import static org.junit.Assert.assertEquals;
 
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import org.junit.jupiter.api.Test;
 
 import com.auth.domain.entities.Username;
 import com.auth.domain.entities.errors.InvalidUsernameException;
+import com.auth.shared.Either;
 
 
 public class UsernameTest {
   @Test
   public void shouldCreateValidUsername() {
     String usernameInput = "validusername";
-    Username createdUsername = Username.create(usernameInput);
-    assertEquals(usernameInput, createdUsername.value);
+    Either<InvalidUsernameException, Username> createdUsername = Username.create(usernameInput);
+    assertEquals(createdUsername.getRight().value, usernameInput);
   }
 
   @Test
   public void shouldThrowInvalidUsernameException() {
     String usernameInput = "invalid username";
-    try {
-      Username.create(usernameInput);
-    } catch(InvalidUsernameException e) {
-      assertEquals(e.getMessage(), "O nome de úsuario não cumpre os requisitos mínimos!");
-      assertEquals(e.name, "InvalidUsernameException");
-    }
+    Either<InvalidUsernameException, Username> error = Username.create(usernameInput);
+    assertTrue(error.isLeft());
+    assertEquals(error.getLeft().getMessage(), new InvalidUsernameException().getMessage());
   }
 
   @Test
   public void shouldThrowInvalidUsernameExceptionIfUsernameContainsSpecialCharacters() {
     String usernameInput = "invalid@username";
-    try {
-      Username.create(usernameInput);
-    } catch(InvalidUsernameException e) {
-      assertEquals(e.getMessage(), "O nome de úsuario não cumpre os requisitos mínimos!");
-      assertEquals(e.name, "InvalidUsernameException");
-    }
+    Either<InvalidUsernameException, Username> error = Username.create(usernameInput);
+    assertTrue(error.isLeft());
+    assertEquals(error.getLeft().getMessage(), new InvalidUsernameException().getMessage());
   }
 }

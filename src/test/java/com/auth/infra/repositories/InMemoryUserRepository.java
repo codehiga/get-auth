@@ -4,8 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.auth.domain.entities.User;
+import com.auth.domain.errors.ValidationError;
+import com.auth.domain.errors.ValidationError.ErrorType;
 import com.auth.domain.ports.UserRepository;
 import com.auth.infra.errors.UsernameAlreadyExistsException;
+import com.auth.shared.Either;
 
 public class InMemoryUserRepository implements UserRepository {
 
@@ -16,11 +19,12 @@ public class InMemoryUserRepository implements UserRepository {
   }
 
   @Override
-  public void save(User data) {
+  public Either<ValidationError, User> save(User data) {
     if(exists(data.username.value)) {
-      throw new UsernameAlreadyExistsException();
+      return Either.left(new ValidationError(ErrorType.USER_ALREADY_EXIST, new UsernameAlreadyExistsException().getMessage()));
     }
     this.repository.add(data);
+    return Either.right(data);
   }
 
   @Override
