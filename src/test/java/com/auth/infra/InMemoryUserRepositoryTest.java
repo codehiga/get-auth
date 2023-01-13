@@ -35,4 +35,13 @@ public class InMemoryUserRepositoryTest {
     assertTrue(error.isLeft());
     assertEquals(error.getLeft().getMessage(), new UsernameAlreadyExistsException().getMessage());
   }
+
+  @Test
+  public void shouldReturnNullIfUserNotExist() {
+    List<User> users = new ArrayList<User>();
+    InMemoryUserRepository inMemoryUserRepository = new InMemoryUserRepository(users);
+    String usernameNotExist = "notExist";
+    User notFound = inMemoryUserRepository.findByUsername(usernameNotExist);
+    assertEquals(notFound, null);
+  }
 }
