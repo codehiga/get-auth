@@ -13,7 +13,7 @@ public class UsernameTest {
   public void shouldCreateValidUsername() {
     String usernameInput = "valid_username";
     Username createdUsername = Username.create(usernameInput);
-    assertEquals(usernameInput, createdUsername.username);
+    assertEquals(usernameInput, createdUsername.value);
   }
 
   @Test

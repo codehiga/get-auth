@@ -12,7 +12,7 @@ public class PasswordTest {
   public void shouldCreatePassword() {
     String inputPassword = "12345678";
     Password createdPassword = Password.create(inputPassword);
-    assertEquals(inputPassword, createdPassword.password);
+    assertEquals(inputPassword, createdPassword.value);
   }
 
   @Test
