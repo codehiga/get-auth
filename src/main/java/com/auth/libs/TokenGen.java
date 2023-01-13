@@ -1,0 +1,21 @@
+package com.auth.libs;
+import java.util.Date;
+
+import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.SignatureAlgorithm;
+
+public class TokenGen {
+  private static final String SECRET_KEY = "mysecretkey";
+  private static final long EXPIRATION_TIME = 3_600_000;
+
+  public static String generateToken(String username) {
+    Date now = new Date();
+    Date expiration = new Date(now.getTime() + EXPIRATION_TIME);
+    return Jwts.builder()
+            .setSubject(username)
+            .setIssuedAt(now)
+            .setExpiration(expiration)
+            .signWith(SignatureAlgorithm.HS256, SECRET_KEY)
+            .compact();
+  }
+}
