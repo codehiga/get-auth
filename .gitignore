@@ -1,2 +1,9 @@
+.vscode/
 bin/
+target/
 *.class
+*/target/**
+target/
+/target/
+*/target/**
+**/META-INF/
