@@ -29,13 +29,12 @@ public class InMemoryUserRepository implements UserRepository {
 
   @Override
   public User findByUsername(String username) {
-    User userFound = null;
     for(User user : this.repository) {
       if(user.username.value == username) {
-        userFound = user;
+        return user;
       }
     }
-    return userFound;
+    return null;
   }
 
   @Override
