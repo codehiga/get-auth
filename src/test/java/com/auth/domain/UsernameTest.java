@@ -26,4 +26,15 @@ public class UsernameTest {
       assertEquals(e.name, "InvalidUsernameException");
     }
   }
+
+  @Test
+  public void shouldThrowInvalidUsernameExceptionIfUsernameContainsSpecialCharacters() {
+    String usernameInput = "invalid@username";
+    try {
+      Username.create(usernameInput);
+    } catch(InvalidUsernameException e) {
+      assertEquals(e.getMessage(), "O nome de úsuario não cumpre os requisitos mínimos!");
+      assertEquals(e.name, "InvalidUsernameException");
+    }
+  }
 }
