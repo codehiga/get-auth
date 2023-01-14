@@ -8,7 +8,7 @@ public class PassHashAdapter {
     return hash;
   }
 
-  public static boolean isEqual(String hash, String password) {
+  public static boolean isEqual(String password, String hash) {
     BCrypt.Result isEqual = BCrypt.verifyer().verify(password.toCharArray(), hash);
     return isEqual.verified;
   }

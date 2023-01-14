@@ -7,7 +7,7 @@ import com.auth.domain.entities.User;
 import com.auth.domain.errors.ValidationError;
 import com.auth.domain.errors.ValidationError.ErrorType;
 import com.auth.infra.ports.UserRepository;
-import com.auth.libs.TokenGeneratorAdapter;
+import com.auth.libs.JwtAdapter;
 import com.auth.shared.Either;
 
 public class AuthenticateUser {
@@ -27,11 +27,11 @@ public class AuthenticateUser {
     if(userOrNull == null) {
       return Either.left(new ValidationError(ErrorType.USER_NOT_FOUND, "Usuário não encontrado"));
     }
-    Boolean validPassword = Password.verifyPassword(user.password.value, authUserData.getPassword());
-    if(validPassword.equals(false)) {
+    Boolean validPassword = Password.verifyPassword(authUserData.getPassword(), userOrNull.password.value);
+    if(!validPassword) {
       return Either.left(new ValidationError(ErrorType.INVALID_PASSWORD, "Senha inválida."));
     }
-    String token = TokenGeneratorAdapter.generateToken(user.username.value);
+    String token = JwtAdapter.generateToken(user.username.value);
     AuthResponseDTO authResponse = new AuthResponseDTO();
     authResponse.setToken(token);
     return Either.right(authResponse);
