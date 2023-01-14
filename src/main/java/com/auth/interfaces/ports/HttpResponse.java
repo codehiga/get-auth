@@ -1,4 +1,4 @@
-package com.auth.controllers.ports;
+package com.auth.interfaces.ports;
 
 public class HttpResponse {
   public Integer statusCode;

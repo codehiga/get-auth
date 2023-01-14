@@ -1,7 +1,7 @@
 package com.auth.main.factories;
 
 import com.auth.application.usecases.RegisterUser;
-import com.auth.controllers.RegisterUserController;
+import com.auth.interfaces.RegisterUserController;
 
 public class RegisterUserControllerFactory {
   public static RegisterUserController makeRegisterUserController() {

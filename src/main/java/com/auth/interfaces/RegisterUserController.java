@@ -1,10 +1,10 @@
-package com.auth.controllers;
+package com.auth.interfaces;
 
 import com.auth.shared.dto.CreateNewUserDTO;
 import com.auth.application.usecases.RegisterUser;
-import com.auth.controllers.helpers.Created;
-import com.auth.controllers.helpers.Unauthorized;
-import com.auth.controllers.ports.HttpResponse;
+import com.auth.interfaces.helpers.Created;
+import com.auth.interfaces.helpers.Unauthorized;
+import com.auth.interfaces.ports.HttpResponse;
 import com.auth.application.domain.entities.User;
 import com.auth.application.domain.errors.ValidationError;
 import com.auth.shared.Either;

@@ -1,7 +1,7 @@
 package com.auth.main.factories;
 
 import com.auth.application.usecases.AuthenticateUser;
-import com.auth.controllers.AuthenticateUserController;
+import com.auth.interfaces.AuthenticateUserController;
 
 public class AuthenticateUserControllerFactory {
   public static AuthenticateUserController makeAuthenticateUserController() {

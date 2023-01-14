@@ -1,6 +1,6 @@
-package com.auth.controllers.helpers;
+package com.auth.interfaces.helpers;
 
-import com.auth.controllers.ports.HttpResponse;
+import com.auth.interfaces.ports.HttpResponse;
 
 public class Created {
   public static HttpResponse response() {
