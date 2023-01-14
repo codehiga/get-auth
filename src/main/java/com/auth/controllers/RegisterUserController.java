@@ -5,8 +5,8 @@ import com.auth.application.usecases.RegisterUser;
 import com.auth.controllers.helpers.Created;
 import com.auth.controllers.helpers.Unauthorized;
 import com.auth.controllers.ports.HttpResponse;
-import com.auth.domain.entities.User;
-import com.auth.domain.errors.ValidationError;
+import com.auth.application.domain.entities.User;
+import com.auth.application.domain.errors.ValidationError;
 import com.auth.shared.Either;
 
 public class RegisterUserController {

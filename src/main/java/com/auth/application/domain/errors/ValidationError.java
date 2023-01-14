@@ -1,4 +1,4 @@
-package com.auth.domain.errors;
+package com.auth.application.domain.errors;
 
 public class ValidationError {
   private final ErrorType errorType;

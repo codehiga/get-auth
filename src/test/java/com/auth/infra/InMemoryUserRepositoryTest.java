@@ -8,8 +8,8 @@ import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
-import com.auth.domain.entities.User;
-import com.auth.domain.errors.ValidationError;
+import com.auth.application.domain.entities.User;
+import com.auth.application.domain.errors.ValidationError;
 import com.auth.infra.errors.UsernameAlreadyExistsException;
 import com.auth.infra.repositories.InMemoryUserRepository;
 import com.auth.shared.Either;

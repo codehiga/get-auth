@@ -1,7 +1,7 @@
 package com.auth.infra.ports;
 
-import com.auth.domain.entities.User;
-import com.auth.domain.errors.ValidationError;
+import com.auth.application.domain.entities.User;
+import com.auth.application.domain.errors.ValidationError;
 import com.auth.shared.Either;
 
 public interface UserRepository {

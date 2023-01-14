@@ -6,7 +6,7 @@ import com.auth.application.usecases.AuthenticateUser;
 import com.auth.controllers.helpers.Authenticated;
 import com.auth.controllers.helpers.Unauthorized;
 import com.auth.controllers.ports.HttpResponse;
-import com.auth.domain.errors.ValidationError;
+import com.auth.application.domain.errors.ValidationError;
 import com.auth.shared.Either;
 
 public class AuthenticateUserController {

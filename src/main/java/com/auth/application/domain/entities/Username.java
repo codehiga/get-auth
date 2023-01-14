@@ -1,6 +1,6 @@
-package com.auth.domain.entities;
+package com.auth.application.domain.entities;
 
-import com.auth.domain.entities.errors.InvalidUsernameException;
+import com.auth.application.domain.entities.errors.InvalidUsernameException;
 import com.auth.shared.Either;
 
 public class Username {

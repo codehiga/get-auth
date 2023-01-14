@@ -6,8 +6,8 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
 
-import com.auth.domain.entities.Password;
-import com.auth.domain.entities.errors.InvalidPasswordException;
+import com.auth.application.domain.entities.Password;
+import com.auth.application.domain.entities.errors.InvalidPasswordException;
 import com.auth.shared.Either;
 
 public class PasswordTest {

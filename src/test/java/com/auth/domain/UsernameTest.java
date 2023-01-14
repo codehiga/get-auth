@@ -6,8 +6,8 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
 
-import com.auth.domain.entities.Username;
-import com.auth.domain.entities.errors.InvalidUsernameException;
+import com.auth.application.domain.entities.Username;
+import com.auth.application.domain.entities.errors.InvalidUsernameException;
 import com.auth.shared.Either;
 
 

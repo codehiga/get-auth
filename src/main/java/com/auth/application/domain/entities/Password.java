@@ -1,6 +1,6 @@
-package com.auth.domain.entities;
+package com.auth.application.domain.entities;
 
-import com.auth.domain.entities.errors.InvalidPasswordException;
+import com.auth.application.domain.entities.errors.InvalidPasswordException;
 import com.auth.libs.PassHashAdapter;
 import com.auth.shared.Either;
 

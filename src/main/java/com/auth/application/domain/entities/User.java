@@ -1,9 +1,9 @@
-package com.auth.domain.entities;
+package com.auth.application.domain.entities;
 
-import com.auth.domain.entities.errors.InvalidPasswordException;
-import com.auth.domain.entities.errors.InvalidUsernameException;
-import com.auth.domain.errors.ValidationError;
-import com.auth.domain.errors.ValidationError.ErrorType;
+import com.auth.application.domain.entities.errors.InvalidPasswordException;
+import com.auth.application.domain.entities.errors.InvalidUsernameException;
+import com.auth.application.domain.errors.ValidationError;
+import com.auth.application.domain.errors.ValidationError.ErrorType;
 import com.auth.shared.Either;
 
 public class User {

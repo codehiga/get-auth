@@ -2,10 +2,10 @@ package com.auth.application.usecases;
 
 import com.auth.application.dto.AuthResponseDTO;
 import com.auth.application.dto.AuthenticateUserDTO;
-import com.auth.domain.entities.Password;
-import com.auth.domain.entities.User;
-import com.auth.domain.errors.ValidationError;
-import com.auth.domain.errors.ValidationError.ErrorType;
+import com.auth.application.domain.entities.Password;
+import com.auth.application.domain.entities.User;
+import com.auth.application.domain.errors.ValidationError;
+import com.auth.application.domain.errors.ValidationError.ErrorType;
 import com.auth.infra.ports.UserRepository;
 import com.auth.libs.JwtAdapter;
 import com.auth.shared.Either;

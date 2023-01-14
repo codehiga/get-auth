@@ -5,10 +5,10 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
 
-import com.auth.domain.entities.User;
-import com.auth.domain.entities.errors.InvalidPasswordException;
-import com.auth.domain.entities.errors.InvalidUsernameException;
-import com.auth.domain.errors.ValidationError;
+import com.auth.application.domain.entities.User;
+import com.auth.application.domain.entities.errors.InvalidPasswordException;
+import com.auth.application.domain.entities.errors.InvalidUsernameException;
+import com.auth.application.domain.errors.ValidationError;
 import com.auth.shared.Either;
 
 public class UserTest {

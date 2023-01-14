@@ -1,4 +1,4 @@
-package com.auth.domain.entities.errors;
+package com.auth.application.domain.entities.errors;
 
 public class InvalidPasswordException extends Error {
   public String name = "InvalidPasswordException";
