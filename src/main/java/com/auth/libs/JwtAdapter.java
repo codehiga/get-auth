@@ -4,7 +4,7 @@ import java.util.Date;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 
-public class TokenGeneratorAdapter {
+public class JwtAdapter {
   private static final String SECRET_KEY = "my_secret_key";
   private static final long EXPIRATION_TIME = 3_600_000;
 
@@ -17,5 +17,9 @@ public class TokenGeneratorAdapter {
             .setExpiration(expiration)
             .signWith(SignatureAlgorithm.HS256, SECRET_KEY)
             .compact();
+  }
+
+  public static Boolean validateToken(String token) {
+      return Jwts.parser().isSigned(token);
   }
 }
