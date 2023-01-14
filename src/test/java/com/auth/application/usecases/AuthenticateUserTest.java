@@ -8,6 +8,7 @@ import java.util.List;
 import org.junit.jupiter.api.Test;
 
 import com.auth.application.dto.AuthResponseDTO;
+import com.auth.application.dto.AuthenticateUserDTO;
 import com.auth.domain.entities.User;
 import com.auth.domain.errors.ValidationError;
 import com.auth.infra.repositories.InMemoryUserRepository;
@@ -19,9 +20,12 @@ public class AuthenticateUserTest {
     List<User> users = new ArrayList<User>();
     InMemoryUserRepository inMemoryUserRepository = new InMemoryUserRepository(users);
     AuthenticateUser authenticateUser = new AuthenticateUser(inMemoryUserRepository);
-    Either<ValidationError, User> validUserToValidate = User.create("usernameGenToken", "12345678");
+    AuthenticateUserDTO authUserData = new AuthenticateUserDTO();
+    authUserData.setUsername("validUserToValidate");
+    authUserData.setPassword("12345678");
+    Either<ValidationError, User> validUserToValidate = User.create(authUserData.getUsername(), authUserData.getPassword());
     inMemoryUserRepository.save(validUserToValidate.getRight());
-    Either<ValidationError, AuthResponseDTO> authResponse = authenticateUser.execute(validUserToValidate.getRight(), "12345678");
+    Either<ValidationError, AuthResponseDTO> authResponse = authenticateUser.execute(authUserData);
     assertTrue(authResponse.isRight());
   }
   
