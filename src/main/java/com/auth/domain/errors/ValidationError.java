@@ -22,6 +22,7 @@ public class ValidationError {
     INVALID_PASSWORD,
     USER_ALREADY_EXIST,
     USER_NOT_FOUND,
-    LOGIN_FAILED
+    LOGIN_FAILED,
+    SAVE_USER_ERROR
   }
 }
