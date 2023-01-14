@@ -1,6 +1,6 @@
-package com.auth.presenters.helpers;
+package com.auth.controllers.helpers;
 
-import com.auth.presenters.ports.HttpResponse;
+import com.auth.controllers.ports.HttpResponse;
 
 public class Unauthorized {
   public static HttpResponse response(String message) {

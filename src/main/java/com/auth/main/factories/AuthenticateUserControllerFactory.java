@@ -5,7 +5,7 @@ import com.auth.controllers.AuthenticateUserController;
 
 public class AuthenticateUserControllerFactory {
   public static AuthenticateUserController makeAuthenticateUserController() {
-    AuthenticateUser usecase = new AuthenticateUser(InMemoryRepositoryFactory.get());
+    AuthenticateUser usecase = new AuthenticateUser(RepositoryFactory.get());
     AuthenticateUserController controller = new AuthenticateUserController(usecase);
     return controller;
   }

@@ -24,7 +24,7 @@ public class AuthenticateUser {
     }
     User user = userOrError.getRight();
     User userOrNull = this.userRepository.findByUsername(user.username.value);
-    if(userOrNull.equals(null)) {
+    if(userOrNull == null) {
       return Either.left(new ValidationError(ErrorType.USER_NOT_FOUND, "Usuário não encontrado"));
     }
     Boolean validPassword = Password.verifyPassword(user.password.value, authUserData.getPassword());
