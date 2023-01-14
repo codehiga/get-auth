@@ -7,8 +7,8 @@ import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
-import com.auth.application.dto.AuthResponseDTO;
-import com.auth.application.dto.AuthenticateUserDTO;
+import com.auth.shared.dto.AuthResponseDTO;
+import com.auth.shared.dto.AuthenticateUserDTO;
 import com.auth.application.domain.entities.User;
 import com.auth.application.domain.errors.ValidationError;
 import com.auth.infra.repositories.InMemoryUserRepository;

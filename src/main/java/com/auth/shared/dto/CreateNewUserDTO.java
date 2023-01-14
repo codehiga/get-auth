@@ -1,6 +1,6 @@
-package com.auth.application.dto;
+package com.auth.shared.dto;
 
-public class AuthenticateUserDTO {
+public class CreateNewUserDTO {
   private String username;
   private String password;
 

@@ -1,4 +1,4 @@
-package com.auth.application.dto;
+package com.auth.shared.dto;
 
 public class AuthResponseDTO {
   private String token;

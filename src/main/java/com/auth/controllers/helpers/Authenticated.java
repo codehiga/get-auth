@@ -1,6 +1,6 @@
 package com.auth.controllers.helpers;
 
-import com.auth.application.dto.AuthResponseDTO;
+import com.auth.shared.dto.AuthResponseDTO;
 import com.auth.controllers.ports.HttpResponse;
 
 public class Authenticated {

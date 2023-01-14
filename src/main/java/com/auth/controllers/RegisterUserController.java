@@ -1,6 +1,6 @@
 package com.auth.controllers;
 
-import com.auth.application.dto.CreateNewUserDTO;
+import com.auth.shared.dto.CreateNewUserDTO;
 import com.auth.application.usecases.RegisterUser;
 import com.auth.controllers.helpers.Created;
 import com.auth.controllers.helpers.Unauthorized;

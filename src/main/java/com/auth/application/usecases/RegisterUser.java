@@ -1,6 +1,6 @@
 package com.auth.application.usecases;
 
-import com.auth.application.dto.CreateNewUserDTO;
+import com.auth.shared.dto.CreateNewUserDTO;
 import com.auth.application.domain.entities.Password;
 import com.auth.application.domain.entities.User;
 import com.auth.application.domain.errors.ValidationError;

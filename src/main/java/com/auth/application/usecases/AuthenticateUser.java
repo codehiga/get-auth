@@ -1,7 +1,7 @@
 package com.auth.application.usecases;
 
-import com.auth.application.dto.AuthResponseDTO;
-import com.auth.application.dto.AuthenticateUserDTO;
+import com.auth.shared.dto.AuthResponseDTO;
+import com.auth.shared.dto.AuthenticateUserDTO;
 import com.auth.application.domain.entities.Password;
 import com.auth.application.domain.entities.User;
 import com.auth.application.domain.errors.ValidationError;

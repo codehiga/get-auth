@@ -1,7 +1,7 @@
 package com.auth.controllers;
 
-import com.auth.application.dto.AuthResponseDTO;
-import com.auth.application.dto.AuthenticateUserDTO;
+import com.auth.shared.dto.AuthResponseDTO;
+import com.auth.shared.dto.AuthenticateUserDTO;
 import com.auth.application.usecases.AuthenticateUser;
 import com.auth.controllers.helpers.Authenticated;
 import com.auth.controllers.helpers.Unauthorized;
