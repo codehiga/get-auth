@@ -6,9 +6,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.auth.application.dto.CreateNewUserDTO;
+import com.auth.controllers.RegisterUserController;
 import com.auth.domain.entities.User;
 import com.auth.main.factories.RegisterUserControllerFactory;
-import com.auth.presenters.RegisterUserController;
 
 @Controller
 @RestController(value = "/api")

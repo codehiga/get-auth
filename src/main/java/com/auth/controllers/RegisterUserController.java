@@ -1,4 +1,4 @@
-package com.auth.presenters;
+package com.auth.controllers;
 
 import com.auth.application.dto.CreateNewUserDTO;
 import com.auth.application.usecases.RegisterUser;

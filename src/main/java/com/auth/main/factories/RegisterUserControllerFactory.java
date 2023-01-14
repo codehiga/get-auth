@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.auth.application.usecases.RegisterUser;
+import com.auth.controllers.RegisterUserController;
 import com.auth.domain.entities.User;
 import com.auth.infra.InMemoryUserRepository;
 import com.auth.infra.ports.UserRepository;
-import com.auth.presenters.RegisterUserController;
 
 public class RegisterUserControllerFactory {
 
