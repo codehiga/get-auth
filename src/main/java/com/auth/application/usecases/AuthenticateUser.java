@@ -7,11 +7,11 @@ import com.auth.domain.entities.User;
 import com.auth.domain.errors.ValidationError;
 import com.auth.domain.errors.ValidationError.ErrorType;
 import com.auth.infra.ports.UserRepository;
-import com.auth.libs.TokenGen;
+import com.auth.libs.TokenGeneratorAdapter;
 import com.auth.shared.Either;
 
 public class AuthenticateUser {
-  private UserRepository userRepository;
+  private final UserRepository userRepository;
   
   public AuthenticateUser(UserRepository userRepository){
     this.userRepository = userRepository;
@@ -31,7 +31,7 @@ public class AuthenticateUser {
     if(validPassword.equals(false)) {
       return Either.left(new ValidationError(ErrorType.INVALID_PASSWORD, "Senha inválida."));
     }
-    String token = TokenGen.generateToken(user.username.value);
+    String token = TokenGeneratorAdapter.generateToken(user.username.value);
     AuthResponseDTO authResponse = new AuthResponseDTO();
     authResponse.setToken(token);
     return Either.right(authResponse);

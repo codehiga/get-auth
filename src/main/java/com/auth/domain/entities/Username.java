@@ -19,7 +19,7 @@ public class Username {
   }
 
   private static boolean isValid(String username) {
-    if(username.isEmpty() | username.isBlank()) {
+    if(username.isEmpty()) {
       return false;
     }
     if(username.contains(" ")) {

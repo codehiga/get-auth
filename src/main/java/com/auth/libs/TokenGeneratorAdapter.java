@@ -4,8 +4,8 @@ import java.util.Date;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 
-public class TokenGen {
-  private static final String SECRET_KEY = "mysecretkey";
+public class TokenGeneratorAdapter {
+  private static final String SECRET_KEY = "my_secret_key";
   private static final long EXPIRATION_TIME = 3_600_000;
 
   public static String generateToken(String username) {

@@ -1,7 +1,7 @@
 package com.auth.domain.entities;
 
 import com.auth.domain.entities.errors.InvalidPasswordException;
-import com.auth.libs.PassHash;
+import com.auth.libs.PassHashAdapter;
 import com.auth.shared.Either;
 
 public class Password {
@@ -21,11 +21,11 @@ public class Password {
   }
 
   public static String hashPassword(String password) {
-    return PassHash.hash(password);
+    return PassHashAdapter.hash(password);
 }
 
   public static boolean verifyPassword(String password, String hashedPassword) {
-    return PassHash.isEqual(password ,hashedPassword);
+    return PassHashAdapter.isEqual(password ,hashedPassword);
   }
 
   private static boolean isValidPassword(String password) {
