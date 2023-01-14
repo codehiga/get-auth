@@ -16,8 +16,8 @@ public class Password {
     if(!isValidPassword) {
       return Either.left(new InvalidPasswordException());
     }
-    String hashedPassword = hashPassword(password);
-    return Either.right(new Password(hashedPassword));
+//    String hashedPassword = hashPassword(password);
+    return Either.right(new Password(password));
   }
 
   public static String hashPassword(String password) {
@@ -25,7 +25,7 @@ public class Password {
 }
 
   public static boolean verifyPassword(String password, String hashedPassword) {
-    return PassHashAdapter.isEqual(password ,hashedPassword);
+    return PassHashAdapter.isEqual(password, hashedPassword);
   }
 
   private static boolean isValidPassword(String password) {
