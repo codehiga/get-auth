@@ -18,8 +18,4 @@ public class JwtAdapter {
             .signWith(SignatureAlgorithm.HS256, SECRET_KEY)
             .compact();
   }
-
-  public static Boolean validateToken(String token) {
-      return Jwts.parser().isSigned(token);
-  }
 }
